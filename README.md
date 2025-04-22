@@ -85,6 +85,20 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_libxml22.12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25419&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libsbml-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libxml22.12" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libxml22.13</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25419&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libsbml-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libxml22.13" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_libxml22.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25419&branchName=main">
