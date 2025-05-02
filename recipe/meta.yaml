@@ -1,5 +1,5 @@
 {% set name = "libsbml" %}
-{% set version = "5.20.4" %}
+{% set version = "5.20.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/sbmlteam/libsbml/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 02c225d3513e1f5d6e3c0168456f568e67f006eddaab82f09b4bdf0d53d2050e
-  
+  sha256: 78d31fae25669dfa65d767ea3ff58ef95c9dcb4de7d8eac6f608cb6dbf5901c5
+
 build:
-  number: 2
+  number: 0
   run_exports:
     - {{ pin_subpackage('libsbml', max_pin='x.x') }}
 
@@ -23,12 +23,11 @@ requirements:
     - cmake
     - make  # [not win]
     - ninja  # [win]
-    
   host:
     - zlib
     - bzip2
     - libxml2
-  
+
 test:
   commands:
     - test -f "${PREFIX}/lib/libsbml${SHLIB_EXT-.so}"  # [linux]
@@ -39,8 +38,6 @@ test:
     - test -f "${PREFIX}/lib/cmake/sbml-config.cmake"  # [not win]
     - if not exist %PREFIX%/Library/lib/cmake/libsbml-config.cmake exit 1  # [win]
     - test -f "${PREFIX}/lib/pkgconfig/libsbml.pc"  # [not win]
-    
-    
 about:
   home: http://sbml.org/software/libsbml/
   summary: 'Non-official conda package of libSBML with all available packages'
@@ -48,12 +45,12 @@ about:
     LibSBML is a free, open-source programming library to help you read, write, manipulate, translate, and validate SBML files and data streams.
     This is a non-official conda package of libSBML with all available packages, working for linux-64, linux-aarch64, osx-64, osx-arm64 and win-64. 
     This version was compiled with CPP namespace ON.
-  
+
   license: LGPL-2.1-only
   license_family: LGPL
-  
+
   license_file: LICENSE.txt
-  
+
   doc_url: https://sbml.org/software/libsbml/libsbml-docs/api/c++/
   dev_url: https://github.com/sbmlteam/libsbml/
 
