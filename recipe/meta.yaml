@@ -10,7 +10,7 @@ source:
   sha256: 21c88c753a4a031f157a033de3810488b86f003e684c6ca7aa3d6e26e7e0acfc
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libsbml', max_pin='x.x') }}
 
@@ -26,7 +26,7 @@ requirements:
   host:
     - zlib
     - bzip2
-    - libxml2
+    - libxml2-devel
 
 test:
   commands:
